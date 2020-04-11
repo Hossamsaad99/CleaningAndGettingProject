@@ -18,3 +18,11 @@ subjectTest<-read.table("test/subject_test.txt",header = F)
 activityTest<-read.table("test/y_test.txt",header = F)
 FeatureTest<-read.table("test/X_test.txt",header = F)
 ```
+
+## Part1:  Merge Train and Test Sets together
+```r
+Activity<-rbind(ActivityTrain,activityTest)
+Subject<-rbind(SubjectTrain,subjectTest)
+Features<-rbind(FeatureTrain,FeatureTest)
+```
+
